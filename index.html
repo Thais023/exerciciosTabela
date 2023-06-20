@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" id="linkEstilos">
+    <title>Tabela com HTML5</title>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID do funcionário</th>
+                <th>Nome do funcionário</th>
+                <th>Cargo</th>
+                <th>Empresa</th>
+                <th>Email</th>
+                <th>Possui crachá</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2557</td>
+                <td>Juliana siqueira</td>
+                <td>Auxiliar Adm</td>
+                <td>Adecco</td>
+                <td>julianasiq@hotmail.com</td>
+                <td>sim</td>
+            </tr>
+            <tr>
+                <td>2558</td>
+                <td>Roberto Santos</td>
+                <td>Técnico de informática</td>
+                <td>Programming </td>
+                <td>robersant@gmail.com</td>
+                <td>sim</td>
+            </tr>
+            <tr>
+                <td>2559</td>
+                <td>Amanda Sales</td>
+                <td>Auxiliar de escritório</td>
+                <td>Alma viva</td>
+                <td>amandsal@gmail.com</td>
+                <td>não</td>
+            </tr>
+            <tr>
+                <td>2560</td>
+                <td>Tatiane Alves</td>
+                <td>Atendente</td>
+                <td>Rodobens</td>
+                <td>tatialves@gmail.com</td>
+                <td>não</td>
+            </tr>
+            <tr>
+                <td>2561</td>
+                <td>Pamela dos Santos</td>
+                <td>Auxiliar de produção</td>
+                <td>Maggion</td>
+                <td>pamsant@gmail.com</td>
+                <td>sim</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Quantidade de funcionários</td>
+                <td>total</td>
+
+
+            </tr>
+
+
+        </tfoot>
+    </table>
+
+    <button type="button" id="botao">Remover estilos</button>
+    <script>
+        function toggleEstilo() {
+            const linkEstilos = document.querySelector('#linkEstilos');
+
+            if (linkEstilos.hasAttribute('disabled')) {
+                linkEstilos.removeAttribute('disabled')
+                botao.innerHTML = 'Remover estilos';
+                
+            } else {
+                linkEstilos.setAttribute('disabled','');
+                botao.innerHTML = 'Aplicar estilos';
+               
+            }
+        }
+
+
+
+        const botao = document.querySelector('#botao');
+        botao.addEventListener('click', toggleEstilo);
+    </script>
+
+</body>
+
+</html>
